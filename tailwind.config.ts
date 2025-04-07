@@ -64,7 +64,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				hotel: {
-					primary: '#1E3A8A',    // Bleu marine
+					primary: '#3B82F6',    // Bleu vif
 					secondary: '#06B6D4',  // Turquoise
 					accent: '#8B5CF6',     // Violet
 					alert: '#EF4444',      // Rouge
@@ -72,13 +72,18 @@ export default {
 					warning: '#F59E0B',    // Orange
 					info: '#3B82F6',       // Bleu
 					light: '#F3F4F6',      // Gris clair
-					dark: '#1F2937',       // Gris foncé
+					dark: '#1E293B',       // Bleu foncé
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				'neon': '0 0 5px theme("colors.blue.400"), 0 0 20px theme("colors.blue.600")',
+				'neon-purple': '0 0 5px theme("colors.purple.400"), 0 0 20px theme("colors.purple.600")',
+				'inner-glow': 'inset 0 0 15px rgba(59, 130, 246, 0.5)',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -104,17 +109,40 @@ export default {
 				'spin-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '1',
+						boxShadow: '0 0 10px rgba(59, 130, 246, 0.5)'
+					},
+					'50%': { 
+						opacity: '0.8',
+						boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
-				'spin-slow': 'spin-slow 3s linear infinite'
+				'spin-slow': 'spin-slow 3s linear infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				heading: ['Poppins', 'sans-serif']
+				heading: ['Space Grotesk', 'Poppins', 'sans-serif']
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'grid-lines': 'linear-gradient(to right, rgba(99, 102, 241, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(99, 102, 241, 0.1) 1px, transparent 1px)'
+			},
+			backgroundSize: {
+				'grid': '40px 40px'
 			}
 		}
 	},
