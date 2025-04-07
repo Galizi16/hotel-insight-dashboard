@@ -15,19 +15,20 @@ const DashboardCard = ({ title, icon, children, className, onClick }: DashboardC
   return (
     <Card 
       className={cn(
-        "overflow-hidden transition-all duration-300 hover:shadow-lg card-gradient border border-white/10", 
-        "transform hover:-translate-y-1 relative",
+        "overflow-hidden transition-all duration-300 hover:shadow-xl neo-border", 
+        "transform hover:-translate-y-1 hover:scale-[1.01] relative",
+        "bg-gradient-to-br from-card to-muted/30 backdrop-blur-sm",
         onClick ? "cursor-pointer" : "", 
         className
       )}
       onClick={onClick}
     >
-      <div className="absolute inset-0 bg-grid-lines bg-grid opacity-5"></div>
+      <div className="absolute inset-0 bg-grid-lines bg-grid opacity-10"></div>
       
-      <CardHeader className="relative z-10 bg-gradient-to-r from-hotel-primary/80 to-hotel-primary/60 text-white p-4">
-        <CardTitle className="flex items-center gap-2 text-lg">
-          {icon}
-          {title}
+      <CardHeader className="relative z-10 cyber-lines text-white p-4">
+        <CardTitle className="flex items-center gap-2 text-lg font-semibold">
+          {icon && <span className="text-cyan-400">{icon}</span>}
+          <span className="text-gradient">{title}</span>
         </CardTitle>
         
         <div className="absolute top-0 right-0 w-16 h-16 bg-white/5 rounded-bl-full"></div>
@@ -37,7 +38,7 @@ const DashboardCard = ({ title, icon, children, className, onClick }: DashboardC
         {children}
       </CardContent>
       
-      <div className="absolute bottom-0 right-0 w-20 h-20 bg-blue-500/5 rounded-tl-full"></div>
+      <div className="absolute bottom-0 right-0 w-20 h-20 bg-cyan-500/5 rounded-tl-full"></div>
     </Card>
   );
 };

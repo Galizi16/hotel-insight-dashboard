@@ -13,10 +13,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #38bdf8aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #38bdf8aa);
 }
 
 @keyframes logo-spin {
@@ -59,10 +59,11 @@
 
 /* Glassmorphism */
 .glass {
-  background: rgba(40, 51, 69, 0.5);
+  background: rgba(23, 34, 49, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Light trails effect */
@@ -81,7 +82,7 @@
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(59, 130, 246, 0.1) 50%,
+    rgba(56, 189, 248, 0.2) 50%,
     transparent 100%
   );
   animation: light-sweep 3s ease-in-out infinite;
@@ -98,10 +99,12 @@
 
 /* Futuristic grid background */
 .futuristic-grid {
+  background-color: rgba(15, 23, 42, 0.3);
   background-image: 
-    linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
   background-size: 20px 20px;
+  background-position: center center;
 }
 
 /* Pulse effect */
@@ -122,4 +125,56 @@
 
 .pulse-ring {
   animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+/* Neon glow effect */
+.neon-glow {
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.5), 
+              0 0 10px rgba(56, 189, 248, 0.3), 
+              0 0 15px rgba(56, 189, 248, 0.1);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 5px rgba(149, 79, 229, 0.5), 
+              0 0 10px rgba(149, 79, 229, 0.3), 
+              0 0 15px rgba(149, 79, 229, 0.1);
+}
+
+.neon-text {
+  text-shadow: 0 0 5px rgba(56, 189, 248, 0.7), 
+               0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+/* Cyberpunk lines */
+.cyber-lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-lines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(56, 189, 248, 0.5) 50%, 
+    transparent 100%
+  );
+}
+
+.cyber-lines::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(149, 79, 229, 0.5) 50%, 
+    transparent 100%
+  );
 }
