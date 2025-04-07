@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -102,11 +101,11 @@
   }
   
   .navbar-link {
-    @apply flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/5 transition-colors relative overflow-hidden group;
+    @apply flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-700/5 transition-colors relative overflow-hidden group;
   }
   
   .navbar-link.active {
-    @apply bg-white/10 font-medium;
+    @apply bg-gray-700/10 font-medium;
   }
 
   .navbar-link::before {
@@ -119,11 +118,11 @@
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+    @apply bg-gray-200/5 backdrop-blur-md border border-white/10 shadow-xl;
   }
   
   .glass-panel {
-    @apply bg-card/80 backdrop-blur-md border border-white/5 rounded-xl;
+    @apply bg-gray-200/80 backdrop-blur-md border border-white/5 rounded-xl;
   }
   
   .card-gradient {
@@ -168,5 +167,3 @@
     mask-composite: exclude;
   }
 }
-
-

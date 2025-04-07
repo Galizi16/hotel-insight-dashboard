@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 
 const Navbar = () => {
   return (
-    <header className="bg-white border-b shadow-sm py-2 px-4 md:px-6">
+    <header className="bg-gray-100 border-b shadow-sm py-2 px-4 md:px-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center md:hidden">
           <h1 className="text-xl font-bold text-hotel-primary">HotelInsight</h1>
@@ -21,11 +21,11 @@ const Navbar = () => {
         </div>
 
         <nav className="hidden md:flex items-center gap-1">
-          <Link to="/tarifs" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100">Tarifs</Link>
-          <Link to="/disponibilites" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100">Disponibilités</Link>
-          <Link to="/staff" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100">Staff</Link>
-          <Link to="/concurrence" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100">Concurrence</Link>
-          <Link to="/alertes" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100">Alertes</Link>
+          <Link to="/tarifs" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200">Tarifs</Link>
+          <Link to="/disponibilites" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200">Disponibilités</Link>
+          <Link to="/staff" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200">Staff</Link>
+          <Link to="/concurrence" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200">Concurrence</Link>
+          <Link to="/alertes" className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200">Alertes</Link>
         </nav>
         
         <div className="flex items-center gap-3">
