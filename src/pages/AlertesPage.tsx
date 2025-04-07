@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import DashboardLayout from '@/components/DashboardLayout';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
+import { toast } from 'sonner';
 import { 
   BellRing, 
   UserX, 
@@ -21,7 +21,6 @@ import { PopoverContent, PopoverTrigger, Popover } from '@/components/ui/popover
 import { Calendar } from '@/components/ui/calendar';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
-import { toast } from '@/components/ui/sonner';
 
 interface Alerte {
   id: string;
@@ -122,20 +121,17 @@ const AlertesPage = () => {
   const alertesFiltrees = filtrerAlertes();
   const alertesNonLues = alertes.filter(a => !a.lue).length;
   
-  // Compter les alertes par module
   const alertesParModule: Record<string, number> = alertes.reduce((acc, alerte) => {
     acc[alerte.module] = (acc[alerte.module] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
   
-  // Compter les alertes par niveau
   const alertesParNiveau: Record<string, number> = alertes.reduce((acc, alerte) => {
     acc[alerte.niveau] = (acc[alerte.niveau] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
   
   const marquerCommeLue = (id: string) => {
-    // Dans une vraie application, on ferait un appel API ici
     const index = alertes.findIndex(a => a.id === id);
     if (index !== -1) {
       alertes[index].lue = true;
@@ -144,7 +140,6 @@ const AlertesPage = () => {
   };
   
   const marquerToutesCommeLues = () => {
-    // Dans une vraie application, on ferait un appel API ici
     alertes.forEach(a => a.lue = true);
     toast.success("Toutes les alertes ont été marquées comme lues");
   };

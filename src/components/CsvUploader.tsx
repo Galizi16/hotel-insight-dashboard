@@ -1,7 +1,7 @@
 
 import { ChangeEvent, DragEvent, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import { Upload, FileIcon, AlertCircle } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
