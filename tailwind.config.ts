@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				hotel: {
+					primary: '#1E3A8A',    // Bleu marine
+					secondary: '#06B6D4',  // Turquoise
+					accent: '#8B5CF6',     // Violet
+					alert: '#EF4444',      // Rouge
+					success: '#10B981',    // Vert
+					warning: '#F59E0B',    // Orange
+					info: '#3B82F6',       // Bleu
+					light: '#F3F4F6',      // Gris clair
+					dark: '#1F2937',       // Gris foncé
 				}
 			},
 			borderRadius: {
@@ -84,11 +96,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'spin-slow': 'spin-slow 3s linear infinite'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif']
 			}
 		}
 	},
