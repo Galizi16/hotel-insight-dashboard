@@ -7,13 +7,13 @@
 
 @layer base {
   :root {
-    --background: 225 14% 10%;
+    --background: 222 25% 18%;
     --foreground: 210 40% 98%;
 
-    --card: 229 20% 12%;
+    --card: 224 30% 22%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 229 20% 12%;
+    --popover: 224 30% 22%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 221.2 83.2% 53.3%; /* Bleu principal */
@@ -22,7 +22,7 @@
     --secondary: 187.9 75.4% 52.7%; /* Turquoise */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 229 14% 20%;
+    --muted: 229 14% 30%;
     --muted-foreground: 215.4 16.3% 76.9%;
 
     --accent: 262.1 83.3% 57.8%; /* Violet */
@@ -31,19 +31,19 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 229 12% 25%;
-    --input: 229 12% 25%;
+    --border: 229 12% 30%;
+    --input: 229 12% 30%;
     --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 224 30% 15%;
+    --sidebar-background: 224 30% 20%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 221.2 83.2% 53.3%;
     --sidebar-primary-foreground: 210 40% 98%;
     --sidebar-accent: 262.1 83.3% 57.8%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 224 25% 20%;
+    --sidebar-border: 224 25% 25%;
     --sidebar-ring: 221.2 83.2% 53.3%;
   }
 }
@@ -56,8 +56,8 @@
   body {
     @apply bg-background text-foreground font-sans overflow-x-hidden;
     background-image: 
-      radial-gradient(circle at 20% 30%, rgba(47, 70, 186, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 80% 70%, rgba(121, 40, 202, 0.12) 0%, transparent 40%);
+      radial-gradient(circle at 20% 30%, rgba(47, 70, 186, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(121, 40, 202, 0.08) 0%, transparent 40%);
     background-attachment: fixed;
   }
 

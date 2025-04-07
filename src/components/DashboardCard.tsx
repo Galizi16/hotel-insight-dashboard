@@ -15,16 +15,16 @@ const DashboardCard = ({ title, icon, children, className, onClick }: DashboardC
   return (
     <Card 
       className={cn(
-        "overflow-hidden transition-all duration-300 hover:shadow-lg card-gradient border border-white/5", 
+        "overflow-hidden transition-all duration-300 hover:shadow-lg card-gradient border border-white/10", 
         "transform hover:-translate-y-1 relative",
         onClick ? "cursor-pointer" : "", 
         className
       )}
       onClick={onClick}
     >
-      <div className="absolute inset-0 bg-grid-lines bg-grid opacity-10"></div>
+      <div className="absolute inset-0 bg-grid-lines bg-grid opacity-5"></div>
       
-      <CardHeader className="relative z-10 bg-gradient-to-r from-hotel-primary/90 to-hotel-primary/70 text-white p-4">
+      <CardHeader className="relative z-10 bg-gradient-to-r from-hotel-primary/80 to-hotel-primary/60 text-white p-4">
         <CardTitle className="flex items-center gap-2 text-lg">
           {icon}
           {title}
